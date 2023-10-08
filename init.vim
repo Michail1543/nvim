@@ -18,6 +18,14 @@ autocmd BufWinLeave * call clearmatches()
 " set softtabstop=4
 " set shiftwidth=4
 
+"newrf - file manager
+nmap <C-n> :Lexplore<CR>
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_winsize = 25
+let g:netrw_altv = 1
+
 "Number string
 set number
 
@@ -37,8 +45,6 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
 "Keymap
 "set iminsert=0
 "set imsearch=0
@@ -59,7 +65,6 @@ vnoremap p "+p
 
 "tagbar
 nmap <C-b> :TagbarToggle<CR>
-nmap <C-n> :NERDTreeToggle<CR>
 "vim-plug manager
 "command to install:
 "sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs\
@@ -68,7 +73,6 @@ call plug#begin('~/.local/share/nvim/site/autoload/plugged')
     Plug 'jiangmiao/auto-pairs'
     Plug 'preservim/tagbar'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'preservim/nerdtree'
     Plug 'b3nj5m1n/kommentary'
     Plug 'dr-kino/cscope-maps'
 call plug#end()
