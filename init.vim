@@ -18,13 +18,6 @@ autocmd BufWinLeave * call clearmatches()
 " set softtabstop=4
 " set shiftwidth=4
 
-"newrf - file manager
-nmap <C-n> :Lexplore<CR>
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_winsize = 25
-let g:netrw_altv = 1
 
 "Number string
 set number
@@ -63,6 +56,11 @@ nnoremap p "+p
 vnoremap y "+y
 vnoremap p "+p
 
+"Nerdtree
+nnoremap <C-n> :NERDTreeToggle<CR>
+
+
+
 "tagbar
 nmap <C-b> :TagbarToggle<CR>
 "vim-plug manager
@@ -72,6 +70,8 @@ nmap <C-b> :TagbarToggle<CR>
 call plug#begin('~/.local/share/nvim/site/autoload/plugged')
     Plug 'jiangmiao/auto-pairs'
     Plug 'preservim/tagbar'
+    Plug 'preservim/nerdtree'
+    Plug 'vim-airline/vim-airline'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'b3nj5m1n/kommentary'
     Plug 'dr-kino/cscope-maps'
